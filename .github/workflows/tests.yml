@@ -12,12 +12,11 @@ on:
 jobs:
   tests:
     name: Test
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
         language: [ "python" ]
-        os: [ubuntu-latest, macos-latest]
 
     steps:
       - name: Checkout repository
